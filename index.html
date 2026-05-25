@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis — A Heart-Centered Community House</title>
+    <style>
+        :root {
+            --ocean-deep: #0a1628;
+            --ocean-mid: #1a3a5c;
+            --ocean-light: #2d6187;
+            --sand: #f4e8d3;
+            --sand-light: #faf5ed;
+            --coral: #e8785a;
+            --foam: #d4eaf7;
+            --gold: #c9a84c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: var(--ocean-deep);
+            background: var(--sand-light);
+            line-height: 1.7;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-mid) 40%, var(--ocean-light) 100%);
+            color: var(--sand);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(212, 234, 247, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-style: italic;
+            opacity: 0.85;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .wave-divider {
+            width: 100%;
+            height: 80px;
+            background: var(--sand-light);
+            position: relative;
+        }
+
+        .wave-divider::before {
+            content: '';
+            position: absolute;
+            top: -79px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--sand-light);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--ocean-mid);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--foam);
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(10, 22, 40, 0.06);
+            border-left: 4px solid var(--ocean-light);
+        }
+
+        .value-card h3 {
+            font-size: 1.1rem;
+            color: var(--ocean-mid);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .rooms-section {
+            background: var(--foam);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .rooms-section h3 {
+            color: var(--ocean-mid);
+            margin-bottom: 1rem;
+        }
+
+        .rooms-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rooms-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(26, 58, 92, 0.1);
+            font-size: 1rem;
+        }
+
+        .rooms-section li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-mid));
+            color: var(--sand);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-section h2 {
+            color: var(--sand);
+            border-bottom-color: rgba(244, 232, 211, 0.2);
+        }
+
+        .contact-section p {
+            opacity: 0.9;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.9rem 2.5rem;
+            background: var(--coral);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 120, 90, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: var(--ocean-mid);
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Oasis</h1>
+    <p class="tagline">A heart-centered, sex-positive community house in Arizona</p>
+</div>
+
+<div class="wave-divider"></div>
+
+<section>
+    <h2>Welcome Aboard</h2>
+    <p>
+        Oasis is a five-bedroom community house where open-hearted people live, grow, and
+        explore together. We're building a home that honors both depth and play — a place
+        where you can be fully yourself.
+    </p>
+    <p>
+        The house carries an ocean and boat theme (courtesy of Captain Lin and our
+        ocean-loving homeowner), but each room is yours to make your own. Bring your vibe,
+        your art, your altar — whatever makes a space feel like home.
+    </p>
+</section>
+
+<section>
+    <h2>Our Values</h2>
+    <p>
+        We're a small crew, not a commune with a rulebook. But these are the currents that
+        run through the house:
+    </p>
+    <div class="values-grid">
+        <div class="value-card">
+            <h3>Heart-Centered Connection</h3>
+            <p>We lead with openness and authenticity. Real relating over surface-level pleasantries.</p>
+        </div>
+        <div class="value-card">
+            <h3>Sex-Positivity &amp; Consent</h3>
+            <p>Eros is welcome here. So are clear boundaries, honest communication, and enthusiastic consent.</p>
+        </div>
+        <div class="value-card">
+            <h3>Personal Sovereignty</h3>
+            <p>You don't have to shrink to belong. We celebrate each person standing in their own truth.</p>
+        </div>
+        <div class="value-card">
+            <h3>Growth Over Comfort</h3>
+            <p>We welcome honest reflection and feedback as doorways to deeper connection and self-knowledge.</p>
+        </div>
+        <div class="value-card">
+            <h3>Communal Care</h3>
+            <p>Shared meals, shared spaces, shared presence. We take care of the home and each other.</p>
+        </div>
+        <div class="value-card">
+            <h3>Playfulness</h3>
+            <p>Life here doesn't have to be heavy. We make room for joy, humor, spontaneity, and adventure.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>The Rooms</h2>
+    <p>
+        We have five private bedrooms in the house. Right now we're looking for housemates
+        who resonate with what we're building.
+    </p>
+    <div class="rooms-section">
+        <h3>What to Expect</h3>
+        <ul>
+            <li>Private bedroom in a shared house</li>
+            <li>Shared kitchen, living areas, and outdoor space</li>
+            <li>A community of people on similar paths</li>
+            <li>Boat-themed common areas (yes, really)</li>
+        </ul>
+        <p style="margin-top: 1rem; font-style: italic; opacity: 0.7;">
+            Room photos coming soon.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="contact-section">
+        <h2>Interested?</h2>
+        <p>
+            If this resonates, reach out. Tell us a bit about yourself — what draws you here,
+            what you're looking for in a living situation, and what you'd bring to the house.
+        </p>
+        <a class="contact-link" href="sms:+1XXXXXXXXXX">Text Us</a>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+            Or find us in the Tantra Arizona community chats.
+        </p>
+    </div>
+</section>
+
+<footer>
+    Oasis &mdash; Arizona
+</footer>
+
+</body>
+</html>
