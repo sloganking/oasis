@@ -166,27 +166,35 @@
         }
 
         .room-status {
-            display: inline-block;
-            padding: 0.2rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-style: normal;
             font-weight: 700;
-            letter-spacing: 0.02em;
+        }
+
+        .room-status::before {
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            margin-right: 0.35rem;
+            vertical-align: middle;
         }
 
         .room-available {
+            color: #2da44e;
+        }
+
+        .room-available::before {
             background: #2da44e;
-            color: #ffffff;
-            border: 2px solid #1a7f37;
-            box-shadow: 0 1px 4px rgba(45, 164, 78, 0.3);
         }
 
         .room-taken {
+            color: #9a3030;
+        }
+
+        .room-taken::before {
             background: #cf222e;
-            color: #ffffff;
-            border: 2px solid #a01a23;
-            box-shadow: 0 1px 4px rgba(207, 34, 46, 0.3);
         }
 
         .contact-section {
