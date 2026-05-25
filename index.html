@@ -165,6 +165,30 @@
             border-bottom: none;
         }
 
+        .room-status {
+            display: inline-block;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .room-available {
+            background: #2da44e;
+            color: #ffffff;
+            border: 2px solid #1a7f37;
+            box-shadow: 0 1px 4px rgba(45, 164, 78, 0.3);
+        }
+
+        .room-taken {
+            background: #cf222e;
+            color: #ffffff;
+            border: 2px solid #a01a23;
+            box-shadow: 0 1px 4px rgba(207, 34, 46, 0.3);
+        }
+
         .contact-section {
             text-align: center;
             background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-mid));
@@ -288,19 +312,18 @@
         casita. Five bedrooms total, five housemates building something together.
     </p>
     <div class="rooms-section">
-        <h3>Main House — 3 Bedrooms</h3>
+        <h3>Main House</h3>
         <ul>
-            <li>Shared kitchen, living room, and common areas</li>
-            <li>Boat-themed throughout (Captain Lynn's touch)</li>
-            <li>More communal energy — you're in the heart of things</li>
+            <li><strong>Under the Sea</strong> <span class="room-status room-available">Available</span><br>Master bedroom with a nice walk-in shower.</li>
+            <li><strong>The Spirit Room</strong> <span class="room-status room-available">Available</span><br>Cozy room with bathroom access next door.</li>
+            <li><strong>The Music Room</strong> <span class="room-status room-taken">Taken</span></li>
         </ul>
     </div>
     <div class="rooms-section" style="margin-top: 1.5rem;">
-        <h3>Casita — 2 Bedrooms</h3>
+        <h3>Casita</h3>
         <ul>
-            <li>Separate building on the same property</li>
-            <li>A bit more privacy and independence</li>
-            <li>Still part of the community, just with your own front door</li>
+            <li><strong>The Goddess Room</strong> <span class="room-status room-available">Available</span></li>
+            <li><strong>Captain Lynn's Room</strong> <span class="room-status room-taken">Taken</span></li>
         </ul>
     </div>
     <p style="margin-top: 1.5rem; font-style: italic; opacity: 0.6;">
