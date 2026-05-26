@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis — Photos</title>
+    <style>
+        :root {
+            --ocean-deep: #0a1628;
+            --ocean-mid: #1a3a5c;
+            --ocean-light: #2d6187;
+            --sand: #f4e8d3;
+            --sand-light: #faf5ed;
+            --coral: #e8785a;
+            --foam: #d4eaf7;
+            --gold: #c9a84c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: var(--ocean-deep);
+            background: var(--sand-light);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-mid) 100%);
+            color: var(--sand);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        header a {
+            color: var(--sand);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .gallery-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .gallery-section h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--ocean-mid);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--foam);
+            padding-bottom: 0.5rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(10, 22, 40, 0.1);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 600px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Oasis</h1>
+    <p>Photo Tour</p>
+    <a href="index.html">&larr; Back to main page</a>
+</header>
+
+<div class="gallery-section">
+    <h2>Under the Sea (Master Bedroom)</h2>
+    <div class="photo-grid">
+        <img src="assets/under the sea/2026-05-25_17-37.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-37_1.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-37_2.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-37_3.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38_1.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38_2.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38_3.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38_4.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-38_5.png" alt="Under the Sea">
+        <img src="assets/under the sea/2026-05-25_17-39.png" alt="Under the Sea">
+    </div>
+
+    <h2>The Spirit Room</h2>
+    <div class="photo-grid">
+        <img src="assets/spirit room/2026-05-25_17-41.png" alt="Spirit Room">
+        <img src="assets/spirit room/2026-05-25_17-42.png" alt="Spirit Room">
+        <img src="assets/spirit room/2026-05-25_17-42_1.png" alt="Spirit Room">
+        <img src="assets/spirit room/2026-05-25_17-43.png" alt="Spirit Room">
+    </div>
+
+    <h2>The Music Room</h2>
+    <div class="photo-grid">
+        <img src="assets/Music room/2026-05-25_17-43.png" alt="Music Room">
+        <img src="assets/Music room/2026-05-25_17-43_1.png" alt="Music Room">
+        <img src="assets/Music room/2026-05-25_17-43_2.png" alt="Music Room">
+        <img src="assets/Music room/2026-05-25_17-44.png" alt="Music Room">
+    </div>
+
+    <h2>The Goddess Room</h2>
+    <div class="photo-grid">
+        <img src="assets/Casita common/2026-05-25_17-45.png" alt="Goddess Room">
+    </div>
+
+    <h2>Captain's Quarters</h2>
+    <div class="photo-grid">
+        <img src="assets/Captin's quarters/2026-05-25_17-46.png" alt="Captain's Quarters">
+    </div>
+
+    <h2>Main House — Kitchen</h2>
+    <div class="photo-grid">
+        <img src="assets/main house shared kitchen/2026-05-25_17-40.png" alt="Main House Kitchen">
+        <img src="assets/main house shared kitchen/2026-05-25_17-40_1.png" alt="Main House Kitchen">
+        <img src="assets/main house shared kitchen/2026-05-25_17-40_2.png" alt="Main House Kitchen">
+        <img src="assets/main house shared kitchen/2026-05-25_17-40_3.png" alt="Main House Kitchen">
+    </div>
+
+    <h2>Main House — Common Areas</h2>
+    <div class="photo-grid">
+        <img src="assets/Main house common/2026-05-25_17-42.png" alt="Main House Common">
+        <img src="assets/Main house common/2026-05-25_17-42_2.png" alt="Main House Common">
+        <img src="assets/Main house common area/2026-05-25_17-42.png" alt="Main House Common Area">
+        <img src="assets/Main house common area/2026-05-25_17-42_2.png" alt="Main House Common Area">
+    </div>
+
+    <h2>Casita — Kitchen</h2>
+    <div class="photo-grid">
+        <img src="assets/Casita Kitchen/2026-05-25_17-45.png" alt="Casita Kitchen">
+        <img src="assets/Casita Kitchen/2026-05-25_17-45_1.png" alt="Casita Kitchen">
+        <img src="assets/Casita Kitchen/2026-05-25_17-46_1.png" alt="Casita Kitchen">
+        <img src="assets/Casita Kitchen/2026-05-25_17-47.png" alt="Casita Kitchen">
+    </div>
+
+    <h2>Casita — Common Area</h2>
+    <div class="photo-grid">
+        <img src="assets/Casita common/2026-05-25_17-45_1.png" alt="Casita Common">
+        <img src="assets/Casita common/2026-05-25_17-46_1.png" alt="Casita Common">
+        <img src="assets/Casita common/2026-05-25_17-47.png" alt="Casita Common">
+    </div>
+
+    <h2>The Property</h2>
+    <div class="photo-grid">
+        <img src="assets/house front.png" alt="House Front">
+        <img src="assets/house front with sun.png" alt="House Front with Sun">
+        <img src="assets/casita external.png" alt="Casita External">
+    </div>
+</div>
+
+</body>
+</html>
